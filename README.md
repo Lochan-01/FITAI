@@ -90,10 +90,9 @@ The application will launch on your local network at `http://localhost:5173`.
 Here is a preview of the FitAI Dashboard and Landing interface:
 
 ### Interactive Landing Page
-![Landing Page](./screenshots/media__1782720591942.png)
+![Landing Page](trainned files/Landing_page.png)
 
 ### Neural Command Dashboard
-![Dashboard](./screenshots/media__1782717728301.png)
+![Dashboard](trainned files/Dashboard.png)
 
-### Diet Planner & Macros
-![Diet Planner](./screenshots/media__1782720542194.png)
+🚀 **Deployment:** Coming Soon! The application will be deployed soon with a live demo and production-ready backend.
