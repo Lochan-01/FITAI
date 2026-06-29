@@ -1,0 +1,17 @@
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+.pytest_cache/
+
+# Large model artifacts
+backend/app/ai/models/*.pkl
+backend/app/ai/models/*.task

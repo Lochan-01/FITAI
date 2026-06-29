@@ -1,0 +1,243 @@
+@import "tailwindcss";
+
+html, body, #root {
+  width: 100%;
+  min-height: 100%;
+}
+
+html {
+  color-scheme: dark;
+}
+
+:root {
+  --page-bg: #04060a;           /* True dark pitch-black slate background */
+  --page-bg-alt: #010204;       /* Pitch black */
+  --surface: rgba(16, 22, 37, 0.95); /* Slate card surface */
+  --surface-2: rgba(10, 14, 26, 0.95);
+  --surface-solid: #101625;
+  --surface-soft: rgba(255, 255, 255, 0.05); /* Milky white semi-transparent surface */
+  --border: rgba(6, 182, 212, 0.15); /* Cyan borders matching mockup */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;     /* Slate subtext */
+  --input-bg: rgba(255, 255, 255, 0.05);
+  --input-text: #f8fafc;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --page-bg: #f7f7f7;
+  --page-bg-alt: #ededed;
+  --surface: rgba(255, 255, 255, 0.94);
+  --surface-2: rgba(245, 245, 245, 0.98);
+  --surface-solid: #ffffff;
+  --surface-soft: rgba(233, 233, 233, 0.95);
+  --border: rgba(212, 212, 212, 1);
+  --text-primary: #111111;
+  --text-secondary: #525252;
+  --input-bg: #ffffff;
+  --input-text: #111111;
+}
+
+body {
+  background: var(--page-bg);
+  color: var(--text-primary);
+  font-family: Inter, Arial, sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.theme-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--page-bg), var(--page-bg-alt));
+  color: var(--text-primary);
+}
+
+.theme-surface {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+.theme-surface-solid {
+  background: var(--surface-solid);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+.theme-surface-soft {
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+.theme-input {
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  color: var(--input-text);
+}
+
+.theme-text-secondary {
+  color: var(--text-secondary);
+}
+
+:root[data-theme="light"] .text-cyan-500,
+:root[data-theme="light"] .text-cyan-400,
+:root[data-theme="light"] .text-cyan-300,
+:root[data-theme="light"] .text-emerald-500,
+:root[data-theme="light"] .text-emerald-400,
+:root[data-theme="light"] .text-emerald-300,
+:root[data-theme="light"] .text-green-500,
+:root[data-theme="light"] .text-green-400,
+:root[data-theme="light"] .text-blue-500,
+:root[data-theme="light"] .text-blue-400,
+:root[data-theme="light"] .text-teal-600,
+:root[data-theme="light"] .text-teal-500 {
+  color: var(--text-primary) !important;
+}
+
+:root[data-theme="light"] .bg-cyan-500,
+:root[data-theme="light"] .bg-cyan-400,
+:root[data-theme="light"] .bg-emerald-500,
+:root[data-theme="light"] .bg-emerald-400,
+:root[data-theme="light"] .bg-green-500,
+:root[data-theme="light"] .bg-green-400,
+:root[data-theme="light"] .bg-blue-500,
+:root[data-theme="light"] .bg-blue-400,
+:root[data-theme="light"] .bg-teal-600,
+:root[data-theme="light"] .bg-teal-500,
+:root[data-theme="light"] .from-cyan-500,
+:root[data-theme="light"] .from-cyan-400,
+:root[data-theme="light"] .from-emerald-500,
+:root[data-theme="light"] .from-emerald-400,
+:root[data-theme="light"] .from-green-500,
+:root[data-theme="light"] .from-blue-500,
+:root[data-theme="light"] .from-teal-600,
+:root[data-theme="light"] .via-teal-600,
+:root[data-theme="light"] .to-cyan-600,
+:root[data-theme="light"] .to-cyan-500,
+:root[data-theme="light"] .to-blue-500,
+:root[data-theme="light"] .to-emerald-500 {
+  background-image: none !important;
+  background-color: var(--surface-soft) !important;
+  color: var(--text-primary) !important;
+}
+
+:root[data-theme="light"] .bg-slate-950,
+:root[data-theme="light"] .bg-slate-950\/40,
+:root[data-theme="light"] .bg-slate-950\/70,
+:root[data-theme="light"] .bg-slate-900,
+:root[data-theme="light"] .bg-slate-900\/50,
+:root[data-theme="light"] .bg-slate-800 {
+  background-color: var(--surface-soft) !important;
+  color: var(--text-primary) !important;
+}
+
+:root[data-theme="light"] .border-slate-800,
+:root[data-theme="light"] .border-slate-700 {
+  border-color: var(--border) !important;
+}
+
+:root[data-theme="light"] .text-slate-950,
+:root[data-theme="light"] .text-slate-900,
+:root[data-theme="light"] .text-slate-900\/90,
+:root[data-theme="light"] .text-slate-900\/85 {
+  color: var(--text-primary) !important;
+}
+
+:root[data-theme="light"] .border-cyan-400,
+:root[data-theme="light"] .border-cyan-500,
+:root[data-theme="light"] .border-emerald-400,
+:root[data-theme="light"] .border-emerald-500,
+:root[data-theme="light"] .border-blue-400,
+:root[data-theme="light"] .border-blue-500,
+:root[data-theme="light"] .border-green-500 {
+  border-color: var(--border) !important;
+}
+
+:root[data-theme="light"] .shadow-cyan-500\/5,
+:root[data-theme="light"] .shadow-cyan-500\/10,
+:root[data-theme="light"] .shadow-cyan-500\/20,
+:root[data-theme="light"] .shadow-emerald-500\/10 {
+  box-shadow: none !important;
+}
+
+/* CUSTOM CYBER LIGHT MODE OVERRIDES */
+:root[data-theme="light"] .cyber-panel,
+:root[data-theme="light"] div[class*="from-slate-"],
+:root[data-theme="light"] div[class*="bg-slate-"],
+:root[data-theme="light"] div[class*="bg-gradient-to-br"] {
+  background-image: none !important;
+  background: var(--surface) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+}
+
+:root[data-theme="light"] .cyber-panel::after {
+  display: none !important;
+}
+
+/* For soft surface backgrounds (inner containers, tags, micro elements) */
+:root[data-theme="light"] div[class*="bg-slate-950/"],
+:root[data-theme="light"] div[class*="bg-slate-900/"],
+:root[data-theme="light"] div[class*="bg-slate-800/"],
+:root[data-theme="light"] div.theme-surface-soft {
+  background-color: var(--surface-soft) !important;
+  background-image: none !important;
+  border-color: var(--border) !important;
+}
+
+/* Ensure all text classes are overridden to dark in light mode */
+:root[data-theme="light"] .text-slate-100,
+:root[data-theme="light"] .text-slate-200,
+:root[data-theme="light"] .text-slate-300,
+:root[data-theme="light"] .text-slate-400,
+:root[data-theme="light"] .text-white {
+  color: var(--text-primary) !important;
+}
+
+:root[data-theme="light"] .text-slate-500,
+:root[data-theme="light"] .text-slate-400 {
+  color: var(--text-secondary) !important;
+}
+
+/* Ensure borders map to the light border variable */
+:root[data-theme="light"] div[class*="border-slate-"],
+:root[data-theme="light"] div[class*="border-cyan-"],
+:root[data-theme="light"] div[class*="border-indigo-"],
+:root[data-theme="light"] div[class*="border-emerald-"] {
+  border-color: var(--border) !important;
+}
+
+:root[data-theme="light"] select,
+:root[data-theme="light"] input,
+:root[data-theme="light"] textarea {
+  background-color: var(--surface-solid) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border) !important;
+}
+
+:root[data-theme="light"] select option {
+  background-color: var(--surface-solid) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Preserve color gradients for action buttons explicitly */
+:root[data-theme="light"] button.bg-gradient-to-r,
+:root[data-theme="light"] button[class*="bg-gradient-to-"] {
+  background-image: linear-gradient(to right, #4f46e5, #6366f1, #06b6d4) !important;
+  background-color: transparent !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Force the AuraRunner container to remain dark in light mode to keep screen blending active */
+:root[data-theme="light"] .min-h-\[300px\] {
+  background-color: #0d1527 !important;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(6, 182, 212, 0.15) !important;
+}
+
+:root[data-theme="light"] .min-h-\[300px\] .animate-pulse {
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%) !important;
+}
+
